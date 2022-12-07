@@ -12,7 +12,7 @@ const MovieCard: FC<MovieCardProps> = (props) => {
   const { poster_path, overview, title, id,name} = props;
   return (
     <Link
-      to={`${id}`}
+      to={`/${id}`}
       onClick={() => {
         // console.log(id);
       }}

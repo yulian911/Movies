@@ -12,6 +12,7 @@ import {
   REGISTER,
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
+import movieSlice from "../features/movies/movieSlice"
 import themeSlice from "../features/theme/themeSlice"
 import { apiSlice } from "./api/apiSlice"
 
@@ -24,7 +25,8 @@ const persistConfig = {
 
 const rootReducer = combineReducers({ 
   [apiSlice.reducerPath]: apiSlice.reducer,
-  darkTheme:themeSlice
+  darkTheme:themeSlice,
+  likeMovies:movieSlice
 
 });
 

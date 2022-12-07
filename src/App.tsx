@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Detail from './components/Detail/Detail'
 import Header from './components/Header/Header'
 import Home from './components/Home/Home'
+import LikesMovies from './components/Likes/LikesMovies'
 import { useAppSelector } from './hooks/hooks'
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/" element={<Header />}>
             <Route index element={<Home />} />
             <Route path=":id" element={<Detail />} />
+            <Route path="likes" element={<LikesMovies />} />
           </Route>
         </Routes>
       </div>
